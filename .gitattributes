@@ -1,0 +1,4 @@
+# The generator's tests byte-compare emitted code against expected strings, so
+# a CRLF checkout - Git's default on Windows - fails them. Pin the working tree
+# to LF everywhere.
+* text=auto eol=lf

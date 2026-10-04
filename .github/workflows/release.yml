@@ -1,0 +1,14 @@
+name: Release
+
+permissions:
+  id-token: write # npm trusted publishing (OIDC)
+  contents: write # changelogithub creates the release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    uses: Debbl/workflows/.github/workflows/lib-release.yml@main
